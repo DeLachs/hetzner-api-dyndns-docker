@@ -8,19 +8,21 @@ https://dns.hetzner.com/api-docs/
 
 # Setup
 
-## 1. Clone this repository
+## 1. (optional) Build the Docker container
+
+Clone the repository.
 
 ```bash
 git clone https://github.com/DeLachs/hetzner-api-dyndns-docker.git
 ```
 
-## 2. Build the Docker container
+Build the container.
 
 ```bash
 docker build -t hetzner-dyndns .
 ```
 
-## 3. Run the container
+## 2. Run the container
 
 First copy the ``example.env`` and name it ``.env`` and fill in your informations.
 
@@ -37,7 +39,7 @@ docker-compose up -d
 ### Docker Run
 
 ```bash
-docker run --env-file .env --restart unless-stopped hetzner-dyndns
+docker run --env-file .env --restart unless-stopped ghcr.io/delachs/hetzner-dyndns:latest
 ```
 
 # OS Environment Variables
