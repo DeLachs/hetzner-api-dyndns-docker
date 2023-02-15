@@ -1,0 +1,7 @@
+version: '3.9'
+services:
+  hetzner-dyndns:
+    image: hetzner-dyndns:latest
+    restart: unless-stopped
+    env_file:
+      - .env
